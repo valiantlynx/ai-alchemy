@@ -1,8 +1,8 @@
 fastapi
 uvicorn
 debugpy
-"tensorflow[and-cuda]"
+tensorflow-gpu
 keras-nlp
 keras>=3.*
 tensorrt
-huggingface_hub 
+huggingface_hub

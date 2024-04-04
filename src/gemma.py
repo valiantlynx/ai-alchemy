@@ -54,7 +54,22 @@ gemma_lm.compile(
 )
 gemma_lm.fit(data, epochs=1, batch_size=1)
 
-gemma_lm.save('finetuned_model.keras')
+model_save_kwargs = {
+    "save_format": "tf",  # Specifies to save in TensorFlow format; alternatives include 'h5' for HDF5
+    "include_optimizer": True,  # Whether to save the optimizer's state as well
+}
+
+gemma_lm.save('finetuned_model.keras', save_format="tf", include_optimizer=True)
+
+# Now, when pushing to the Hugging Face Hub
+from huggingface_hub import push_to_hub_keras
+
+push_to_hub_keras(
+    gemma_lm,
+    "praison/gemma-2b-en-finetuned-databricks-dolly-15k",
+    tags=["gemma-2b-en", "finetuned", "databricks-dolly-15k", "gemma", "lora"],
+    **model_save_kwargs  # This expands to fill in the save arguments for the model
+)
 
 print("After fine-tuning:\n")
 
