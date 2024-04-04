@@ -1,3 +1,8 @@
 fastapi
 uvicorn
 debugpy
+"tensorflow[and-cuda]"
+keras-nlp
+keras>=3.*
+tensorrt
+huggingface_hub 
