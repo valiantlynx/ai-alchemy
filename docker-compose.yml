@@ -3,9 +3,9 @@ services:
   fastapi:
     build: .
     ports:
-      - 8000:8000
-      - 5678:5678
+      - 8003:8003
+      - 5679:5679
     volumes:
       - .:/code
-    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8003 --reload
     restart: always

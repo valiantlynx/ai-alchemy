@@ -31,7 +31,7 @@ variable "cloudflare_zone_ids" {
         {
           name    = "ai-alchemy",
           service = "ai-alchemy",
-          port    = 8000
+          port    = 8003
         }
       ],
       include_root = false,
