@@ -29,8 +29,8 @@ variable "cloudflare_zone_ids" {
       port    = 80,      # Example port for the root domain
       subdomains = [
         {
-          name    = "python-development-environment",
-          service = "python-development-environment",
+          name    = "ai-alchemy",
+          service = "ai-alchemy",
           port    = 8000
         }
       ],

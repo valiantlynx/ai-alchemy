@@ -1,6 +1,6 @@
 # ALB
 resource "aws_lb" "alb" {
-  name               = "python-development-environment-load-balancer"
+  name               = "ai-alchemy-load-balancer"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [var.sg_id]

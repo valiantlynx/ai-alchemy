@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "python-development-environment"
+    bucket = "ai-alchemy"
     key    = "dev/terraform.tfstate"
     region = "eu-north-1"
   }
