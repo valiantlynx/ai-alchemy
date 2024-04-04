@@ -66,7 +66,7 @@ from huggingface_hub import push_to_hub_keras
 
 push_to_hub_keras(
     gemma_lm,
-    "praison/gemma-2b-en-finetuned-databricks-dolly-15k",
+    "valiantlynx/gemma-2b-en-finetuned-databricks-dolly-15k",
     tags=["gemma-2b-en", "finetuned", "databricks-dolly-15k", "gemma", "lora"],
     **model_save_kwargs  # This expands to fill in the save arguments for the model
 )
