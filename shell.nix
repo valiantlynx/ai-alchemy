@@ -17,8 +17,10 @@ pkgs.mkShell {
     pkgs.python3Packages.ollama
     pkgs.python3Packages.uvicorn
     pkgs.python3Packages.matplotlib
+    pkgs.python3Packages.tqdm
     pkgs.jupyter
     pkgs.uv
+    pkgs.ollama
   ];
 
   shellHook = ''
