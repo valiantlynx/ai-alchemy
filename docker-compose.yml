@@ -1,11 +1,15 @@
-version: '1.0'
 services:
-  fastapi:
-    build: .
-    ports:
-      - 8000:8000
-      - 5678:5678
+  alchemy:
+    build:
+      context: .
+      args:
+        VAULT_PASSWORD: ${VAULT_PASSWORD}
     volumes:
-      - .:/code
-    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
-    restart: always
+      - .:/home/valiantlynx/ai-alchemy
+    ports:
+      - "8000:8000"
+    environment:
+      VAULT_PASSWORD: ${VAULT_PASSWORD}
+    stdin_open: true
+    tty: true
+    command: /bin/bash

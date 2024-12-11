@@ -18,6 +18,7 @@ pkgs.mkShell {
     pkgs.python3Packages.uvicorn
     pkgs.python3Packages.matplotlib
     pkgs.python3Packages.tqdm
+    pkgs.python3Packages.lancedb
     pkgs.jupyter
     pkgs.uv
     pkgs.ollama
