@@ -1,0 +1,15 @@
+[project]
+name = "ai-alchemy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+	"lancedb>=0.17.0",
+	"langchain-core>=0.3.24",
+	"langchain>=0.3.11",
+	"ollama",
+	"pandas>=2.2.3",
+	"langchain-community>=0.3.11",
+	"lance>=1.2.1",
+]
