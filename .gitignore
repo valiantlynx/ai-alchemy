@@ -1,2 +1,6 @@
 .dist
 /src/__pycache__
+.venv/
+venv/
+.python-version
+*.egg-info
