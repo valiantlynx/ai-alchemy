@@ -21,6 +21,9 @@ pkgs.mkShell {
     pkgs.python3Packages.lancedb
     pkgs.jupyter
     pkgs.uv
+    pkgs.libuv
+    pkgs.pkg-config
+    pkgs.stdenv
     pkgs.ollama
   ];
 
