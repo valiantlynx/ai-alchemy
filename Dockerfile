@@ -35,7 +35,7 @@ ARG VAULT_PASSWORD
 RUN mkdir -p ~/.ansible-vault && echo "$VAULT_PASSWORD" > ~/.ansible-vault/vault.secret && chmod 600 ~/.ansible-vault/vault.secret
 
 # Run the dotfiles installation script
-RUN export USER=valiantlynx && bash -c "$(curl -fsSL https://raw.githubusercontent.com/valiantlynx/dotfiles/main/bin/dotfiles)" -- --tags bash,git
+RUN export USER=valiantlynx && bash -c "$(curl -fsSL https://raw.githubusercontent.com/valiantlynx/dotfiles/main/bin/dotfiles)" -- --tags bash,git,neovim,tmux,fzf,python
 
 # Clean up passwordless sudo for security
 USER root
